@@ -1,0 +1,45 @@
+function bookRide(){
+
+let pickup = document.getElementById("pickup").value
+let drop = document.getElementById("drop").value
+let vehicle = document.getElementById("vehicle").value
+
+if(pickup == "" || drop == ""){
+alert("Please enter locations")
+return
+}
+
+let fare = calculateFare(vehicle)
+
+alert(
+"Ride Booked!\n\nVehicle: " + vehicle +
+"\nPickup: " + pickup +
+"\nDrop: " + drop +
+"\nEstimated Fare: ₹" + fare
+)
+
+}
+
+function calculateFare(vehicle){
+
+if(vehicle == "Bike"){
+return 40
+}
+
+if(vehicle == "Auto"){
+return 60
+}
+
+if(vehicle == "Car"){
+return 100
+}
+
+if(vehicle == "SUV"){
+return 150
+}
+
+if(vehicle == "Van"){
+return 250
+}
+
+}
